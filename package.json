@@ -1,0 +1,47 @@
+{
+  "name": "plenty-eng-takehome-assignment-kelly-chara",
+  "description": "Using TypeScript and React, your challenge is to build out a URL shortening web app, integrate with the [shrtcode API](https://app.shrtco.de/docs), and get it looking as close to the design as possible.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@mui/material": "^5.11.11",
+    "esbuild": "0.16.17",
+    "function-bind": "1.1.1",
+    "has": "1.0.3",
+    "is-core-module": "2.11.0",
+    "js-tokens": "4.0.0",
+    "loose-envify": "1.4.0",
+    "nanoid": "3.3.4",
+    "path-parse": "1.0.7",
+    "picocolors": "1.0.0",
+    "postcss": "8.4.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "resolve": "1.22.1",
+    "rollup": "3.17.3",
+    "scheduler": "0.23.0",
+    "source-map-js": "1.0.2",
+    "styled-components": "^5.3.6",
+    "supports-preserve-symlinks-flag": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "4.9.5",
+    "vite": "4.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://plenty-fhcxex@git.codesubmit.io/plenty/product-eng-takehome-assignment-iueepj"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
