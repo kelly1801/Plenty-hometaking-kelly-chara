@@ -15,7 +15,7 @@ export const Menu = styled.ul`
   left: 50%;
   transform: translate(-50%, 0);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
+padding-bottom: 1rem;
   hr {
     width: 80%;
     color: var(--neutral-gray);
@@ -31,7 +31,7 @@ export const Button = styled.button`
   padding: 0.5rem 0.9rem;
   color: var(--White);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 1rem;
   width: 80%;
   cursor: pointer;
@@ -51,6 +51,7 @@ export const Nav = styled.nav`
   height: 2rem;
 
   @media (min-width: 768px) {
+   padding: 2rem 4rem;
     ${Menu} {
       display: none;
       background-color: red;
