@@ -15,7 +15,7 @@ export const Menu = styled.ul`
   left: 50%;
   transform: translate(-50%, 0);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-padding-bottom: 1rem;
+  padding-bottom: 1rem;
   hr {
     width: 80%;
     color: var(--neutral-gray);
@@ -24,25 +24,6 @@ padding-bottom: 1rem;
 export const MenuItem = styled.li`
   margin: 1.2rem 0;
 `;
-export const Button = styled.button`
-  background-color: var(--primary-cyan);
-  border: none;
-  outline: none;
-  padding: 0.5rem 0.9rem;
-  color: var(--White);
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 1rem;
-  width: 80%;
-  cursor: pointer;
-  
-  &:hover {
-    background-color: #9AE3E3;
-  }
- 
-
-`;
-
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -51,11 +32,10 @@ export const Nav = styled.nav`
   height: 2rem;
 
   @media (min-width: 768px) {
-   padding: 2rem 4rem;
+    padding: 2rem 4rem;
     ${Menu} {
       display: none;
       background-color: red;
     }
   }
 `;
-

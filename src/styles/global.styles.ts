@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
 
 }
+
 html,
 body {
   background-color: var(--White);

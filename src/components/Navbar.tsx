@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Nav, Menu, MenuItem, Button } from "../styles/NavStyles";
-import { FlexContainer, FlexList } from "../styles/containers";
+import { Nav, Menu, MenuItem, Button, FlexContainer, FlexList } from "../styles";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import LogoImg from "../../images/logo.svg";
 

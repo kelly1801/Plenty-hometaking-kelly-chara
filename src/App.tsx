@@ -1,15 +1,9 @@
 import React from "react"
-import {PageContainer} from "./styles/containers";
-import {Navbar} from "./components/Navbar";
-import {Header} from "./components/Header";
+import HomePage from "./screens/HomePage"
 
 const App = () => {
   return (
-    <PageContainer maxWidth="sm">
-        <Navbar/>
-<Header/>
-
-    </PageContainer>
+   <HomePage/>
   )
 }
 

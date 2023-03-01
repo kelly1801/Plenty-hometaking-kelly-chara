@@ -1,15 +1,14 @@
-import React from "react"
-import { Navbar, Header } from "../components"
+import React from "react";
+import { Navbar, Header } from "../components";
+import { PageContainer } from "../styles";
 
 const HomePage = () => {
   return (
-    <>
-    
-    <Navbar/>
-    <Header/>
-      
-    </>
-  )
-}
+    <PageContainer>
+      <Navbar />
+      <Header />
+    </PageContainer>
+  );
+};
 
-export default HomePage
+export default HomePage;

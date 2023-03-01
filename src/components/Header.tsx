@@ -4,8 +4,8 @@ import {
   FlexContainer,
   ColumnContainer,
   TextContainer,
-} from "../styles/containers";
-import { Button } from "../styles/NavStyles";
+  Button,
+} from "../styles";
 import HeaderImg from "../../images/illustration-working.svg";
 export const Header = () => {
   return (
