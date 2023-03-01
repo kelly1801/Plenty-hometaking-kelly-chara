@@ -28,11 +28,11 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
   height: 2rem;
+   padding: 3rem 0;
 
   @media (min-width: 768px) {
-    padding: 2rem 4rem;
+ 
     ${Menu} {
       display: none;
       background-color: red;

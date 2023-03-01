@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Header } from "../components";
+import { Navbar, Header, MainSection} from "../components";
 import { PageContainer } from "../styles";
 
 const HomePage = () => {
@@ -7,6 +7,8 @@ const HomePage = () => {
     <PageContainer>
       <Navbar />
       <Header />
+      <MainSection/>
+     
     </PageContainer>
   );
 };

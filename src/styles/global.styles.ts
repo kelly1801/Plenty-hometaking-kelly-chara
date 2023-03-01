@@ -25,10 +25,10 @@ body {
   --neutral-very-dark-blue: hsl(255, 11%, 22%);
   --neutral-very-dark-violet: hsl(260, 8%, 14%);
   --White: #fff;
-  --font-poppins-500: 'Poppins', sans-serif;
-  --font-poppins-700: 'Poppins', sans-serif;
-  --font-size: 1rem;
-  font: var(--font-size) var(--font-poppins-500);
+  --font-poppins-500: 500  1rem/2rem 'Poppins', sans-serif ;
+  --font-poppins-700: 700  1rem/2rem 'Poppins', sans-serif;
+ 
+  font: var(--font-poppins-500);
 }
 
 `;
