@@ -1,10 +1,12 @@
 import React from "react"
-
+import {PageContainer} from "./styles/containers";
+import {Navbar} from "./styles/Navbar";
 const App = () => {
   return (
-    <div>
+    <PageContainer maxWidth="sm">
+        <Navbar/>
       hello app
-    </div>
+    </PageContainer>
   )
 }
 

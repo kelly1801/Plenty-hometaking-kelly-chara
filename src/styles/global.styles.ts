@@ -10,6 +10,10 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
 
 }
+html,
+body {
+  background-color: var(--White);
+}
 
 :root {
   --primary-cyan: hsl(180, 66%, 49%);
@@ -19,9 +23,10 @@ export const GlobalStyles = createGlobalStyle`
   --neutral-grayish-violet: hsl(257, 7%, 63%);
   --neutral-very-dark-blue: hsl(255, 11%, 22%);
   --neutral-very-dark-violet: hsl(260, 8%, 14%);
+  --White: #fff;
   --font-poppins-500: 'Poppins', sans-serif;
   --font-poppins-700: 'Poppins', sans-serif;
-  --font-size: clamp(1rem, 1.2rem, 1.5rem);
+  --font-size: 1rem;
   font: var(--font-size) var(--font-poppins-500);
 }
 
