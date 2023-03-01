@@ -3,15 +3,19 @@ import styled, { css } from "styled-components";
 interface ColumContainerProps {
   form?: boolean;
   link?: boolean;
+  links?: boolean;
 }
 interface SectionContainerProps {
   main?: boolean;
+}
+interface FlexContainerProps {
+  links?: boolean;
 }
 export const PageContainer = styled.main`
   position: relative;
   overflow-x: hidden;
 `;
-export const FlexContainer = styled.div`
+export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,48 +47,10 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
   align-items: center;
   justify-content: center;
   width: 100%;
+
   figure {
     width: 100%;
   }
-
-  ${(props) =>
-    props.form &&
-    css`
-      background: var(--primary-dark-violet);
-      border-radius: 5px;
-      gap: 2rem;
-      padding: 2rem 0;
-      input {
-        width: 80%;
-        height: 2rem;
-        outline: none;
-        padding-left: 0.5rem;
-        letter-spacing: 0.12px;
-        color: var(--neutral-gray);
-      }
-
-      button {
-        border-radius: 5px;
-      }
-
-      @media (min-width: 768px) {
-        flex-direction: row !important;
-        padding: 2rem;
-       input {
-        flex-grow: 3;
-       }
-      
-    `}
-
-  ${(props) =>
-    props.link &&
-    css`
-      background: var(--White);
-      padding: 2rem 0;
-      border-radius: 5px;
-      margin: 1rem; /* erase margin later*/
-    `}
-
   @media (min-width: 768px) {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -98,7 +64,57 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
     }
   }
 `;
+export const Form = styled(ColumnContainer)`
+      background: var(--primary-dark-violet);
+      border-radius: 5px;
+      gap: 2rem;
+      padding: 2rem;
+      input {
+        width: 100%;
+        height: 2rem;
+        outline: none;
+        padding-left: 0.5rem;
+        letter-spacing: 0.12px;
+        color: var(--neutral-gray);
+      }
 
+      @media (min-width: 768px) {
+         flex-direction: row;
+       input {
+        width: 85%;
+       
+      }
+      }
+       
+`;
+export const LinksWrapper = styled(ColumnContainer)`
+  background: var(--White);
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    hr {
+      display: none;
+    }
+  }
+`;
+
+export const ShortLink = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: unset;
+
+    flex-direction: row;
+  }
+`;
 export const SectionContainer = styled.section<SectionContainerProps>`
   padding: 0 2rem;
   @media (min-width: 768px) {

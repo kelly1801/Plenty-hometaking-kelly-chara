@@ -16,7 +16,7 @@ export const Button = styled.button<ButtonProps>`
   font-size: 1rem;
   font-weight: 700;
   border-radius: ${(props) => props.borderRadius || '1rem' };
-  width: 80%;
+  width: 100%;
   cursor: pointer;
 
   &:hover {
@@ -37,6 +37,9 @@ export const Button = styled.button<ButtonProps>`
 `;
 
 export const Link = styled.p<LinkProps>`
+text-align: left;
+width: 100%;
+margin: 0.5rem 0;
 ${(props) =>
     props.variant === 'large' &&
     css`
@@ -46,8 +49,8 @@ ${(props) =>
     ${(props) =>
     props.variant === 'short' &&
     css`
-      color: var(--primary-cyan)
-    
+      color: var(--primary-cyan);
+   
     `}
 
 `

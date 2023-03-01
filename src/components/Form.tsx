@@ -1,11 +1,13 @@
 import React from "react";
-import { ColumnContainer, Button } from "../styles";
+import { ColumnContainer, Button, Form as FormContainer } from "../styles";
 export const Form = () => {
   return (
-    <ColumnContainer as={"form"} form>
+    <FormContainer as={"form"}>
       <input type="text" placeholder="Shorten a link here..." />
 
-      <Button type="submit">Shorten it!</Button>
-    </ColumnContainer>
+      <Button type="submit" borderRadius="5px">
+        Shorten it!
+      </Button>
+    </FormContainer>
   );
 };

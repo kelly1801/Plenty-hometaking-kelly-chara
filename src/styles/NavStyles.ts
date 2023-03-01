@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Menu = styled.ul`
-  background-color: var(--primary-dark-violet);
+  position: absolute;
+background-color: var(--primary-dark-violet);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,20 +10,17 @@ export const Menu = styled.ul`
   width: 80%;
   border-radius: 10px;
   color: var(--White);
-  gap: 20px;
-  position: absolute;
-  top: 70%;
+  gap: 5px;
+  padding: 0 2rem;
+  top : 5%;
   left: 50%;
   transform: translate(-50%, 0);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   padding-bottom: 1rem;
-  hr {
-    width: 80%;
-    color: var(--neutral-gray);
-  }
+
 `;
 export const MenuItem = styled.li`
-  margin: 1.2rem 0;
+  margin: 0.8rem 0;
 `;
 export const Nav = styled.nav`
   display: flex;

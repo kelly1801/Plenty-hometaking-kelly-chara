@@ -7,16 +7,18 @@ export const Navbar = () => {
   const pages = ["Features", "Pricing", "Resources"];
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  console.log(showMenu)
   const toggleMenu = () => {
     setShowMenu((prev) => !prev);
   };
+  
   return (
     <Nav>
       <FlexContainer>
         <img src={LogoImg} alt="logo.svg" />
         <FlexList>
-          {pages.map((page) => (
-            <li>{page}</li>
+          {pages.map((page, index) => (
+            <li key={index}>{page}</li>
           ))}
         </FlexList>
       </FlexContainer>
@@ -25,21 +27,22 @@ export const Navbar = () => {
         sx={{ color: "#9E9AA8", display: { md: "none" } }}
         onClick={toggleMenu}
       />
-      {showMenu && (
+    
+    <FlexList>
+        <MenuItem>Login</MenuItem>
+        <Button>Sign Up</Button>
+      </FlexList>
+
+      {showMenu && 
         <Menu>
-          {pages.map((page) => (
-            <MenuItem>{page}</MenuItem>
+          {pages.map((page, index) => (
+            <MenuItem key={index}>{page}</MenuItem>
           ))}
           <hr />
           <MenuItem>Login</MenuItem>
           <Button>Sign Up</Button>
         </Menu>
-      )}
-
-      <FlexList>
-        <MenuItem>Login</MenuItem>
-        <Button>Sign Up</Button>
-      </FlexList>
+      }
     </Nav>
   );
 };

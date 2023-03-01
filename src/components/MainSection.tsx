@@ -5,8 +5,8 @@ const MainSection = () => {
   return (
     <SectionContainer main>
       <ColumnContainer>
-      {/* <Form/> */}
-      <LinkContainer/>
+      <Form/>
+      {/* <LinkContainer/> */}
       </ColumnContainer>
     </SectionContainer>
   );
