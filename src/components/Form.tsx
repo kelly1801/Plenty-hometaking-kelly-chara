@@ -1,5 +1,5 @@
 import React from "react";
-import { ColumnContainer, Button, Form as FormContainer } from "../styles";
+import { Button, Form as FormContainer } from "../styles";
 export const Form = () => {
   return (
     <FormContainer as={"form"}>

@@ -1,13 +1,17 @@
 import React from "react";
-import { SectionContainer, ColumnContainer } from "../styles";
-import { Form, LinkContainer } from "../components";
+import { SectionContainer, FlexContainer } from "../styles";
+import { Form, LinkContainer, StatisticsSection } from "../components";
 const MainSection = () => {
   return (
     <SectionContainer main>
-      <ColumnContainer>
-      <Form/>
-      {/* <LinkContainer/> */}
-      </ColumnContainer>
+      <Form />
+      <LinkContainer />
+      <LinkContainer />
+      <LinkContainer />
+      <LinkContainer />
+      <LinkContainer />
+
+      <StatisticsSection />
     </SectionContainer>
   );
 };
