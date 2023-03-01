@@ -1,17 +1,14 @@
 import React from "react";
-import { Navbar, Header, MainSection} from "../components";
-import { PageContainer, SectionContainer } from "../styles";
+import { Navbar, Header, MainSection, BoostSection } from "../components";
+import { PageContainer } from "../styles";
 
 const HomePage = () => {
   return (
-    
     <PageContainer>
- 
-    <Navbar />
+      <Navbar />
       <Header />
-      <MainSection/>
-
-    
+      <MainSection />
+      <BoostSection />
     </PageContainer>
   );
 };

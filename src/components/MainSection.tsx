@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionContainer, FlexContainer } from "../styles";
+import { SectionContainer } from "../styles";
 import { Form, LinkContainer, StatisticsSection } from "../components";
 const MainSection = () => {
   return (
@@ -10,7 +10,6 @@ const MainSection = () => {
       <LinkContainer />
       <LinkContainer />
       <LinkContainer />
-
       <StatisticsSection />
     </SectionContainer>
   );

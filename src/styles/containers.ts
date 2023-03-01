@@ -7,6 +7,7 @@ interface ColumContainerProps {
 }
 interface SectionContainerProps {
   main?: boolean;
+  boost?: boolean;
 }
 interface FlexContainerProps {
   links?: boolean;
@@ -31,7 +32,7 @@ export const TextContainer = styled.div<TextContainerProps>`
   align-items: center;
   justify-content: center;
   text-align: center;
- 
+
   gap: 1rem;
   h2,
   h3,
@@ -144,9 +145,8 @@ export const Form = styled(ColumnContainer)`
   border-radius: 5px;
   gap: 2rem;
   padding: 2rem;
-  
-  
-margin-top: -40%;
+
+  margin-top: -40%;
   input {
     width: 100%;
     height: 2rem;
@@ -168,7 +168,7 @@ export const LinksWrapper = styled(ColumnContainer)`
   background: var(--White);
   padding: 2rem;
   border-radius: 5px;
- margin-top: 1rem;
+  margin-top: 1rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -217,17 +217,27 @@ export const Line = styled.div`
 `;
 export const SectionContainer = styled.section<SectionContainerProps>`
   padding: 4rem 2rem;
-  position: relative; 
+  position: relative;
   padding-bottom: 8rem;
   @media (min-width: 768px) {
     padding: 2rem 6rem;
-
   }
 
   ${(props) =>
     props.main &&
     css`
-    background-color: var(--neutral-light-violet);
+      background-color: var(--neutral-light-violet);
+    `}
+  ${(props) =>
+    props.boost &&
+    css`
+    background-color: var(--primary-dark-violet);
+    h4 {
+      color: var(--White);
+      margin-bottom: 1rem;
+
+    }
+  }
     `}
 `;
 export const FlexList = styled.ul`

@@ -1,3 +1,4 @@
+export { default as BoostSection } from './BoostSection';
 export * from './Form';
 export * from './Header';
 export { default as LinkContainer } from './LinkContainer';
