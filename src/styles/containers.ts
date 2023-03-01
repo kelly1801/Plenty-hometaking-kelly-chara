@@ -2,18 +2,14 @@ import styled, { css } from "styled-components";
 
 interface ColumContainerProps {
   form?: boolean;
+  link?: boolean;
 }
 interface SectionContainerProps {
- main?: boolean;
+  main?: boolean;
 }
 export const PageContainer = styled.main`
-  background-color: #fff;
   position: relative;
- padding: 0 2rem;
-overflow-x: hidden;  
-  @media (min-width: 768px) {
-    padding: 0 6rem;
-      }
+  overflow-x: hidden;
 `;
 export const FlexContainer = styled.div`
   display: flex;
@@ -50,6 +46,7 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
   figure {
     width: 100%;
   }
+
   ${(props) =>
     props.form &&
     css`
@@ -76,10 +73,18 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
        input {
         flex-grow: 3;
        }
-      button {
-        width: max-content;
-      }
+      
     `}
+
+  ${(props) =>
+    props.link &&
+    css`
+      background: var(--White);
+      padding: 2rem 0;
+      border-radius: 5px;
+      margin: 1rem; /* erase margin later*/
+    `}
+
   @media (min-width: 768px) {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -90,21 +95,21 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
       text-align: left;
       align-items: flex-start;
       max-width: 500px;
-      button {
-        width: max-content;
-      }
     }
   }
 `;
 
 export const SectionContainer = styled.section<SectionContainerProps>`
- 
-
+  padding: 0 2rem;
+  @media (min-width: 768px) {
+    padding: 0 6rem;
+  }
 
   ${(props) =>
     props.main &&
     css`
-
+      background-color: var(--neutral-light-violet);
+      height: 100vh;
     `}
 `;
 export const FlexList = styled.ul`

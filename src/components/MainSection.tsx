@@ -1,11 +1,12 @@
 import React from "react";
 import { SectionContainer, ColumnContainer } from "../styles";
-import {Form} from "./Form";
+import { Form, LinkContainer } from "../components";
 const MainSection = () => {
   return (
     <SectionContainer main>
       <ColumnContainer>
-      <Form/>
+      {/* <Form/> */}
+      <LinkContainer/>
       </ColumnContainer>
     </SectionContainer>
   );

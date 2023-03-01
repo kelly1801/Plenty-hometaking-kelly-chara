@@ -29,10 +29,10 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   height: 2rem;
-   padding: 3rem 0;
+  padding: 3rem 2rem;
 
   @media (min-width: 768px) {
- 
+    padding: 3rem 6rem;
     ${Menu} {
       display: none;
       background-color: red;

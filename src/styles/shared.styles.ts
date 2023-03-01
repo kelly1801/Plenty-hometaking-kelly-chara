@@ -1,6 +1,13 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
-export const Button = styled.button`
+interface LinkProps {
+  variant: 'large' | 'short'
+}
+interface ButtonProps {
+  copy?: boolean;
+  borderRadius?: string
+}
+export const Button = styled.button<ButtonProps>`
   background-color: var(--primary-cyan);
   border: none;
   outline: none;
@@ -8,11 +15,39 @@ export const Button = styled.button`
   color: var(--White);
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 1rem;
+  border-radius: ${(props) => props.borderRadius || '1rem' };
   width: 80%;
   cursor: pointer;
 
   &:hover {
     background-color: #9ae3e3;
   }
+    @media (min-width: 768px) {
+
+      width: max-content;
+
+    }
+
+    ${(props) =>
+    props.copy  &&
+    css`
+        background: var(--primary-dark-violet);
+    
+    `}
 `;
+
+export const Link = styled.p<LinkProps>`
+${(props) =>
+    props.variant === 'large' &&
+    css`
+      color: var(--neutral-very-dark-violet)
+    
+    `}
+    ${(props) =>
+    props.variant === 'short' &&
+    css`
+      color: var(--primary-cyan)
+    
+    `}
+
+`
