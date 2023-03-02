@@ -1,12 +1,13 @@
 import axios from "axios";
-import { ShortLink } from "../types/UrlResponse";
-export const ShortApi = axios.create({
+import { ShortLinkResponse } from "../types/UrlResponse";
+
+const ShortApi = axios.create({
   baseURL: "https://api.shrtco.de/v2/",
 });
 
-export const shortLink = async (url: string) => {
+export const getShortLink = async (url: string) => {
   try {
-    const { data } = await ShortApi.post<ShortLink>(`shorten?url=${url}`);
+    const { data } = await ShortApi.post<ShortLinkResponse>(`shorten?url=${url}`);
     return data;
   } catch (error) {
     console.log(error);

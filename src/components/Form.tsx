@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Button, Form as FormContainer, Error } from "../styles";
-import { shortLink } from "../api/axios";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { retrieveShortenLink, setLinks } from "../store/shortenSlice";
+
 const schema = Yup.object().shape({
   link: Yup.string()
     .required("Please enter a link")
@@ -10,13 +12,16 @@ const schema = Yup.object().shape({
 });
 
 export const Form = () => {
+  const {links} = useAppSelector(state => state)
+  
+  const dispatch = useAppDispatch();
+
   const formik = useFormik({
     initialValues: { link: "" },
     onSubmit: ({ link }) => {
+       dispatch(retrieveShortenLink(link));
+  
       
-      shortLink(link)
-      
-      console.log(link);
     },
     validationSchema: schema,
   });
@@ -31,7 +36,7 @@ export const Form = () => {
         name="link"
       />
 
-{formik.errors.link && <Error>{formik.errors.link}</Error>}
+      {formik.errors.link && <Error>{formik.errors.link}</Error>}
       <Button type="submit" borderRadius="5px">
         Shorten it!
       </Button>
