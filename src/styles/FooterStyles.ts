@@ -10,7 +10,11 @@ export const FooterWrapper = styled.footer`
   padding: 1.5rem;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    align-items: flex-start;
+    padding: 3rem 6rem;
   }
 `;
 
@@ -57,4 +61,8 @@ export const ColumnWrapper = styled.div`
 export const IconWrapper = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
