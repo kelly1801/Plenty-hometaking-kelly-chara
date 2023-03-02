@@ -1,5 +1,11 @@
 import React from "react";
-import { Button, Link, LinksWrapper, ShortLink } from "../styles";
+import {
+  Button,
+  Link,
+  LinksWrapper,
+  ShortLink,
+  TextContainer,
+} from "../styles";
 import { useClipboard } from "../hooks/useClipboard";
 interface LinkContainerProps {
   original_link: string;
@@ -9,7 +15,10 @@ const LinkContainer = ({ original_link, short_link }: LinkContainerProps) => {
   const { isCopied, copyToClipboard } = useClipboard();
   return (
     <LinksWrapper>
-      <Link variant="large">{original_link}</Link>
+      
+        <Link variant="large">{original_link}</Link>
+      
+
       <hr />
 
       <ShortLink>

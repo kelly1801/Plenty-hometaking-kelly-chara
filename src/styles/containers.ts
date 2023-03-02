@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
-import { ErrorMessage } from 'formik';
 
+interface TextContainerProps {
+  stats?: boolean;
+}
 interface ColumContainerProps {
   form?: boolean;
-  link?: boolean;
-  links?: boolean;
 }
 interface SectionContainerProps {
   main?: boolean;
@@ -24,9 +24,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
   gap: 1rem;
 `;
 
-interface TextContainerProps {
-  stats?: boolean;
-}
+
 export const TextContainer = styled.div<TextContainerProps>`
   display: flex;
   flex-direction: column;
@@ -56,7 +54,7 @@ export const TextContainer = styled.div<TextContainerProps>`
       background-color: var(--White);
       position: relative;
       padding: 2rem;
-  z-index: 2;  
+      z-index: 2;  
 
       h4 {
         font-size: 1.3rem;
@@ -81,7 +79,7 @@ export const TextContainer = styled.div<TextContainerProps>`
         }
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 900px) {
     padding: 1rem;
 
     figure {
@@ -92,6 +90,7 @@ export const TextContainer = styled.div<TextContainerProps>`
         
 
     `}
+      }
 `;
 export const Figure = styled.figure``;
 export const ColumnContainer = styled.div<ColumContainerProps>`
@@ -104,7 +103,7 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
   ${Figure} {
     width: 100%;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     flex-direction: row-reverse;
     justify-content: space-between;
     ${Figure} {
@@ -126,7 +125,7 @@ export const StatsContainer = styled.div`
 
   margin: 4rem 0;
   gap: 4rem;
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     flex-direction: row;
     justify-content: space-between;
     > *:not(:first-child) {
@@ -143,13 +142,13 @@ export const StatsContainer = styled.div`
 `;
 
 export const Error = styled.span`
-color: var(--secondary-red);
-width: 100%;
-font-size: 0.7rem;
-position: absolute;
-top: 40%;
-left: 10%;
-`
+  color: var(--secondary-red);
+  width: 100%;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+`;
 export const Form = styled(ColumnContainer)`
   background: var(--primary-dark-violet);
   border-radius: 5px;
@@ -166,14 +165,14 @@ export const Form = styled(ColumnContainer)`
     color: var(--neutral-gray);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     flex-direction: row;
     margin-top: -7.5%;
     input {
       width: 85%;
     }
 
-    ${Error}{
+    ${Error} {
       top: 65%;
       left: 2rem;
     }
@@ -184,8 +183,9 @@ export const LinksWrapper = styled(ColumnContainer)`
   padding: 2rem;
   border-radius: 5px;
   margin-top: 1rem;
-
-  @media (min-width: 768px) {
+ 
+  
+  @media (min-width: 900px) {
     flex-direction: row;
     hr {
       display: none;
@@ -201,7 +201,7 @@ export const ShortLink = styled.div`
   gap: 1rem;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     width: unset;
 
     flex-direction: row;
@@ -221,7 +221,7 @@ export const Line = styled.div`
     z-index: 1;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     &::after {
       top: 50%;
       left: 20%;
@@ -234,7 +234,7 @@ export const SectionContainer = styled.section<SectionContainerProps>`
   padding: 4rem 2rem;
   position: relative;
   padding-bottom: 8rem;
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     padding: 2rem 6rem;
   }
 
@@ -266,7 +266,7 @@ export const FlexList = styled.ul`
       color: var(--neutral-very-dark-violet);
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     display: flex;
   }
 `;

@@ -31,7 +31,7 @@ export const Nav = styled.nav`
   height: 2rem;
   padding: 3rem 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     padding: 3rem 6rem;
     ${Menu} {
       display: none;
