@@ -1,11 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import shortenReducer from "./shortenSlice";
+import { persistStore } from "redux-persist";
+import persistedReducer from "./shortenSlice";
+
 const store = configureStore({
   reducer: {
-    links: shortenReducer,
+    links: persistedReducer,
   },
 });
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-export default store;
+const persistor = persistStore(store);
+
+export { store, persistor };

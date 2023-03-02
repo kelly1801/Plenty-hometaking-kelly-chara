@@ -44,8 +44,8 @@ const StatisticsSection = () => {
       </TextContainer>
 
       <StatsContainer>
-        {stats.map((stat) => (
-          <StatsItem {...stat} />
+        {stats.map((stat, index) => (
+          <StatsItem key={index} {...stat} />
         ))}
       </StatsContainer>
 

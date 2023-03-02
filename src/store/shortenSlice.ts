@@ -1,7 +1,22 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { ShortLinkResponse, Result } from "../types/UrlResponse";
 import { getShortLink } from "../api/axios";
-const initialState: ShortLinkResponse[] = [];
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+
+
+const initialState:  {
+  links: ShortLinkResponse[];
+} = {
+  links: []
+}
+
+const persistConfig = {
+  key: "root",
+  storage,
+  blacklist: ["register"],
+};
+
 
 export const retrieveShortenLink = createAsyncThunk(
   "short/retrieve",
@@ -17,15 +32,22 @@ export const shortSlice = createSlice({
   initialState,
   reducers: {
     setLinks: (state, action: PayloadAction<ShortLinkResponse[]>) => {
-      return [...state, ...action.payload];
+      return {
+        ...state,
+        links: [...state.links, ...action.payload],
+      };
     },
   },
   extraReducers: (builder) => {
     builder.addCase(retrieveShortenLink.fulfilled, (state, action) => {
-      return [...state, action.payload];
+      return {
+        ...state,
+        links: [...state.links, action.payload],
+      };
     });
   },
 });
 
+const persistedReducer = persistReducer(persistConfig, shortSlice.reducer);
+export default persistedReducer;
 export const { setLinks } = shortSlice.actions;
-export default shortSlice.reducer;

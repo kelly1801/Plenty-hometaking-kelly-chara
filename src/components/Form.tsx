@@ -12,7 +12,6 @@ const schema = Yup.object().shape({
 });
 
 export const Form = () => {
-  const {links} = useAppSelector(state => state)
   
   const dispatch = useAppDispatch();
 
