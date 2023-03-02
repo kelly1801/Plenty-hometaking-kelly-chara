@@ -4,19 +4,17 @@ import { getShortLink } from "../api/axios";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-
-const initialState:  {
+const initialState: {
   links: ShortLinkResponse[];
 } = {
-  links: []
-}
+  links: [],
+};
 
 const persistConfig = {
   key: "root",
   storage,
   blacklist: ["register"],
 };
-
 
 export const retrieveShortenLink = createAsyncThunk(
   "short/retrieve",

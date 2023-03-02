@@ -32,7 +32,9 @@ export const Button = styled.button<ButtonProps>`
     props.copy  &&
     css`
         background: var(--primary-dark-violet);
-    
+      &:hover {
+    background-color: var(--neutral-grayish-violet);
+  }
     `}
 `;
 

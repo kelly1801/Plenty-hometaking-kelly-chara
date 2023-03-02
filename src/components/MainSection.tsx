@@ -7,8 +7,8 @@ const MainSection = () => {
   return (
     <SectionContainer main>
       <Form />
-      {
-        links.length && links.map(({result}, index) => <LinkContainer key={index} {...result}/> )
+      { 
+      links?.map(({result}, index) => <LinkContainer key={index} {...result}/> )
       }
       
       
