@@ -1,10 +1,8 @@
-import React from "react"
-const App = () => {
-  return (
-    <div>
-      hello app
-    </div>
-  )
-}
+import React from "react";
+import HomePage from "./screens/HomePage";
 
-export default App
+const App = () => {
+  return ( <HomePage /> )
+};
+
+export default App;

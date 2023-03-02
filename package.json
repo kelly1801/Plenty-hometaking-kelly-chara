@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
     "esbuild": "0.16.17",
     "function-bind": "1.1.1",
@@ -33,7 +35,9 @@
   "devDependencies": {
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
+    "prettier": "^2.8.4",
     "typescript": "4.9.5",
     "vite": "4.1.4"
   },
