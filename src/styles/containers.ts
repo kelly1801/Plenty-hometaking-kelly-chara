@@ -37,7 +37,7 @@ export const TextContainer = styled.div<TextContainerProps>`
   h2,
   h3,
   h4 {
-    font-size: 2rem;
+    font-size: 2.6rem;
     line-height: 48px;
     font-weight: 700;
   }
@@ -92,7 +92,7 @@ export const TextContainer = styled.div<TextContainerProps>`
 
     `}
 `;
-
+export const Figure = styled.figure``;
 export const ColumnContainer = styled.div<ColumContainerProps>`
   display: flex;
   flex-direction: column;
@@ -100,15 +100,15 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
   justify-content: center;
   width: 100%;
 
-  /* figure {
+  ${Figure} {
     width: 100%;
-  } */
+  }
   @media (min-width: 768px) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    /* figure {
+    ${Figure} {
       width: 50%;
-    } */
+    }
     ${TextContainer} {
       text-align: left;
       align-items: flex-start;

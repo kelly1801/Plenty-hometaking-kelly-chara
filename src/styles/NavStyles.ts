@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Menu = styled.ul`
   position: absolute;
-background-color: var(--primary-dark-violet);
+  background-color: var(--primary-dark-violet);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,11 +12,13 @@ background-color: var(--primary-dark-violet);
   color: var(--White);
   gap: 5px;
   padding: 0 2rem;
-  top : 5%;
+  top : 5rem;
   left: 50%;
+  z-index: 5;
   transform: translate(-50%, 0);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   padding-bottom: 1rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
 
 `;
 export const MenuItem = styled.li`

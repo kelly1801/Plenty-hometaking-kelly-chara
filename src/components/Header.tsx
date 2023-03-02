@@ -1,19 +1,19 @@
 import React from "react";
 import {
   SectionContainer,
-  FlexContainer,
   ColumnContainer,
   TextContainer,
   Button,
+  Figure
 } from "../styles";
 import HeaderImg from "../../images/illustration-working.svg";
 export const Header = () => {
   return (
     <SectionContainer as={"header"}>
       <ColumnContainer>
-        <figure>
+        <Figure>
           <img src={HeaderImg} alt="illustration working" />
-        </figure>
+        </Figure>
         <TextContainer>
           <h2>More than just shorter links</h2>
           <p>
