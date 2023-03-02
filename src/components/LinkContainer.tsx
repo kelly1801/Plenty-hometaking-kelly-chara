@@ -1,14 +1,32 @@
 import React from "react";
-import { ColumnContainer, Button, Link, FlexContainer, LinksWrapper, ShortLink } from "../styles";
-const LinkContainer = () => {
+import {
+  Button,
+  Link,
+  LinksWrapper,
+  ShortLink,
+} from "../styles";
+import { useClipboard } from "../hooks/useClipboard";
+interface LinkContainerProps {
+  original_link: string;
+  short_link: string;
+}
+const LinkContainer = ({ original_link, short_link }: LinkContainerProps) => {
+  const { isCopied, copyToClipboard } = useClipboard();
   return (
     <LinksWrapper>
-      <Link variant="large">https://www.frontendmentor.io</Link>
-      <hr/>
+      <Link variant="large">{original_link}</Link>
+
+      <hr />
 
       <ShortLink>
-        <Link variant="short">https://rel.ink/k4lKyk</Link>
-        <Button copy={true} borderRadius='5px'>Copy</Button>
+        <Link variant="short">{short_link}</Link>
+        <Button
+          copy={isCopied}
+          borderRadius="5px"
+          onClick={() => copyToClipboard(short_link)}
+        >
+          {isCopied ? "Copied" : "Copy"}
+        </Button>
       </ShortLink>
     </LinksWrapper>
   );

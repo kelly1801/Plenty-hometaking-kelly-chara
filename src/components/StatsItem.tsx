@@ -1,26 +1,22 @@
-import React from 'react'
-import { TextContainer } from '../styles'
+import React from "react";
+import { TextContainer } from "../styles";
 
 interface StatsProps {
-    icon: string;
-    title: string;
-    description: string
-
+  icon: string;
+  title: string;
+  description: string;
 }
-const StatsItem = ({ title, description, icon }:StatsProps) => {
+const StatsItem = ({ title, description, icon }: StatsProps) => {
   return (
-    
-  <TextContainer stats>
-    <figure>
-    <img src={`../../images/icon-${icon}.svg`} alt={icon} />
-    </figure>
- 
+    <TextContainer stats>
+      <figure>
+        <img src={`../../images/icon-${icon}.svg`} alt={icon} />
+      </figure>
+
       <h4>{title}</h4>
       <p>{description}</p>
     </TextContainer>
-    
-  
-  )
-}
+  );
+};
 
-export default StatsItem
+export default StatsItem;

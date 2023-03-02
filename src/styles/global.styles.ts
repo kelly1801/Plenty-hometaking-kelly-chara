@@ -18,8 +18,8 @@ body {
 hr {
   width: 100%;
   background-color: var(--neutral-light-violet);
-   height: 1px;
-    border: 0;
+  height: 1px;
+  border: 0;
 }
 :root {
   --primary-cyan: hsl(180, 66%, 49%);

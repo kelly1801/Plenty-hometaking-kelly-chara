@@ -10,9 +10,8 @@ export const FooterWrapper = styled.footer`
   padding: 1.5rem;
   gap: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     flex-direction: row;
-
     align-items: flex-start;
     padding: 3rem 6rem;
   }
@@ -38,7 +37,7 @@ export const Heading = styled.h3`
   font: var(--font-poppins-700);
   font-size: 1rem;
   text-align: center;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     font-size: 20px;
   }
 `;
@@ -53,7 +52,7 @@ export const ColumnWrapper = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     max-width: none;
   }
 `;
@@ -62,7 +61,7 @@ export const IconWrapper = styled.div`
   display: flex;
   gap: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     flex-direction: row;
   }
 `;

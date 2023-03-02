@@ -7,7 +7,7 @@ export const Navbar = () => {
   const pages = ["Features", "Pricing", "Resources"];
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  console.log(showMenu)
+ 
   const toggleMenu = () => {
     setShowMenu((prev) => !prev);
   };

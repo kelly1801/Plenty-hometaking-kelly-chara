@@ -1,11 +1,11 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 interface LinkProps {
-  variant: 'large' | 'short'
+  variant: "large" | "short";
 }
 interface ButtonProps {
   copy?: boolean;
-  borderRadius?: string
+  borderRadius?: string;
 }
 export const Button = styled.button<ButtonProps>`
   background-color: var(--primary-cyan);
@@ -15,42 +15,43 @@ export const Button = styled.button<ButtonProps>`
   color: var(--White);
   font-size: 1rem;
   font-weight: 700;
-  border-radius: ${(props) => props.borderRadius || '1rem' };
+  border-radius: ${(props) => props.borderRadius || "1rem"};
   width: 100%;
   cursor: pointer;
 
   &:hover {
     background-color: #9ae3e3;
   }
-    @media (min-width: 768px) {
+  @media (min-width: 900px) {
+    width: max-content;
+  }
 
-      width: max-content;
-
-    }
-
-    ${(props) =>
-    props.copy  &&
+  ${(props) =>
+    props.copy &&
     css`
-        background: var(--primary-dark-violet);
-    
+      background: var(--primary-dark-violet);
+      &:hover {
+        background-color: var(--neutral-grayish-violet);
+      }
     `}
 `;
 
-export const Link = styled.p<LinkProps>`
-text-align: left;
-width: 100%;
-margin: 0.5rem 0;
-${(props) =>
-    props.variant === 'large' &&
+export const Link = styled.span<LinkProps>`
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+
+  ${(props) =>
+    props.variant === "large" &&
     css`
-      color: var(--neutral-very-dark-violet)
-    
+      color: var(--neutral-very-dark-violet);
     `}
-    ${(props) =>
-    props.variant === 'short' &&
+  ${(props) =>
+    props.variant === "short" &&
     css`
       color: var(--primary-cyan);
-   
     `}
-
-`
+`;
