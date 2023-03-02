@@ -2,7 +2,7 @@ import React from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Button, Form as FormContainer, Error } from "../styles";
-
+import { shortLink } from "../api/axios";
 const schema = Yup.object().shape({
   link: Yup.string()
     .required("Please enter a link")
@@ -13,6 +13,9 @@ export const Form = () => {
   const formik = useFormik({
     initialValues: { link: "" },
     onSubmit: ({ link }) => {
+      
+      shortLink(link)
+      
       console.log(link);
     },
     validationSchema: schema,
