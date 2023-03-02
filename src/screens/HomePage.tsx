@@ -1,5 +1,11 @@
 import React from "react";
-import { Navbar, Header, MainSection, BoostSection,Footer } from "../components";
+import {
+  Navbar,
+  Header,
+  MainSection,
+  BoostSection,
+  Footer,
+} from "../components";
 import { PageContainer } from "../styles";
 
 const HomePage = () => {
@@ -9,7 +15,7 @@ const HomePage = () => {
       <Header />
       <MainSection />
       <BoostSection />
-      <Footer/>
+      <Footer />
     </PageContainer>
   );
 };

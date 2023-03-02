@@ -14,4 +14,3 @@ export const useClipboard = () => {
 
   return { copyToClipboard, isCopied };
 };
-

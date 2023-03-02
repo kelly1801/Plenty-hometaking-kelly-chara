@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
+import React from "react";
 import { useFormik } from "formik";
 import { Button, Form as FormContainer, Error } from "../styles";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { retrieveShortenLink, setLinks } from "../store/shortenSlice";
-
+import { useAppDispatch } from "../store/hooks";
+import { retrieveShortenLink } from "../store/shortenSlice";
+import Blob from '../../images/bg-shorten-mobile.svg'
+import BlobDesktop from '../../images/bg-shorten-desktop.svg'
 const schema = Yup.object().shape({
   link: Yup.string()
     .required("Please enter a link")
@@ -14,7 +15,6 @@ const schema = Yup.object().shape({
 export const Form = () => {
   
   const dispatch = useAppDispatch();
-
   const formik = useFormik({
     initialValues: { link: "" },
     onSubmit: ({ link }) => {
@@ -26,7 +26,7 @@ export const Form = () => {
   });
 
   return (
-    <FormContainer as={"form"} onSubmit={formik.handleSubmit}>
+    <FormContainer as={"form"} onSubmit={formik.handleSubmit} bg={Blob} bgBig={BlobDesktop}>
       <input
         type="text"
         placeholder="Shorten a link here..."

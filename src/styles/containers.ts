@@ -5,10 +5,14 @@ interface TextContainerProps {
 }
 interface ColumContainerProps {
   form?: boolean;
+  bg?: string;
+  bgBig?: string;
 }
 interface SectionContainerProps {
   main?: boolean;
   boost?: boolean;
+  bg?: string;
+  bgBig?: string;
 }
 interface FlexContainerProps {
   links?: boolean;
@@ -151,6 +155,10 @@ export const Error = styled.span`
 `;
 export const Form = styled(ColumnContainer)`
   background: var(--primary-dark-violet);
+  background-image: url(${props => props.bg });
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 5px;
   gap: 2rem;
   padding: 2rem;
@@ -168,6 +176,7 @@ export const Form = styled(ColumnContainer)`
   @media (min-width: 900px) {
     flex-direction: row;
     margin-top: -7.5%;
+    background-image: url(${props => props.bgBig });
     input {
       width: 85%;
     }
@@ -234,8 +243,14 @@ export const SectionContainer = styled.section<SectionContainerProps>`
   padding: 4rem 2rem;
   position: relative;
   padding-bottom: 8rem;
+  background-image: url(${props => props.bg });
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   @media (min-width: 900px) {
     padding: 2rem 6rem;
+    background-image: url(${props => props.bgBig });
+    
   }
 
   ${(props) =>

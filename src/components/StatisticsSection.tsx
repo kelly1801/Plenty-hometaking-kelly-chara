@@ -3,7 +3,6 @@ import {
   SectionContainer,
   TextContainer,
   Line,
-  ColumnContainer,
   StatsContainer,
 } from "../styles";
 import StatsItem from "./StatsItem";

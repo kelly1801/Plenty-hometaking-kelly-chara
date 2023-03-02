@@ -42,7 +42,6 @@ export const Link = styled.span<LinkProps>`
   text-overflow: ellipsis;
   width: 100%;
   height: auto;
-  background: red;
   margin: 0.5rem 0;
 
   ${(props) =>

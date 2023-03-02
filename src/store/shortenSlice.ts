@@ -1,5 +1,5 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { ShortLinkResponse, Result } from "../types/UrlResponse";
+import { ShortLinkResponse } from "../types/UrlResponse";
 import { getShortLink } from "../api/axios";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";

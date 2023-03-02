@@ -1,5 +1,5 @@
 import React from 'react'
-import { ColumnWrapper, Heading, Menu } from '../styles'
+import { ColumnWrapper, Heading } from '../styles'
 
 interface ColumnProps {
     title: string,
