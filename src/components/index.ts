@@ -1,4 +1,6 @@
 export { default as BoostSection } from './BoostSection';
+export { default as Footer } from './Footer';
+export * from './FooterColumn';
 export * from './Form';
 export * from './Header';
 export { default as LinkContainer } from './LinkContainer';
