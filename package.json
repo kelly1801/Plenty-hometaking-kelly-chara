@@ -13,7 +13,9 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
+    "@reduxjs/toolkit": "^1.9.3",
     "esbuild": "0.16.17",
+    "formik": "^2.2.9",
     "function-bind": "1.1.1",
     "has": "1.0.3",
     "is-core-module": "2.11.0",
@@ -25,12 +27,14 @@
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "resolve": "1.22.1",
     "rollup": "3.17.3",
     "scheduler": "0.23.0",
     "source-map-js": "1.0.2",
     "styled-components": "^5.3.6",
-    "supports-preserve-symlinks-flag": "1.0.0"
+    "supports-preserve-symlinks-flag": "1.0.0",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "18.0.28",

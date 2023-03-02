@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { ErrorMessage } from 'formik';
 
 interface ColumContainerProps {
   form?: boolean;
@@ -140,13 +141,22 @@ export const StatsContainer = styled.div`
     }
   }
 `;
+
+export const Error = styled.span`
+color: var(--secondary-red);
+width: 100%;
+font-size: 0.7rem;
+position: absolute;
+top: 40%;
+left: 10%;
+`
 export const Form = styled(ColumnContainer)`
   background: var(--primary-dark-violet);
   border-radius: 5px;
   gap: 2rem;
   padding: 2rem;
-
   margin-top: -40%;
+  position: relative;
   input {
     width: 100%;
     height: 2rem;
@@ -161,6 +171,11 @@ export const Form = styled(ColumnContainer)`
     margin-top: -7.5%;
     input {
       width: 85%;
+    }
+
+    ${Error}{
+      top: 65%;
+      left: 2rem;
     }
   }
 `;
