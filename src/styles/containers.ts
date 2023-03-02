@@ -102,6 +102,7 @@ export const ColumnContainer = styled.div<ColumContainerProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 3rem;
   width: 100%;
 
   ${Figure} {
@@ -241,6 +242,7 @@ export const Line = styled.div`
 `;
 export const SectionContainer = styled.section<SectionContainerProps>`
   padding: 4rem 2rem;
+
   position: relative;
   padding-bottom: 8rem;
   background-image: url(${props => props.bg });
@@ -248,6 +250,7 @@ export const SectionContainer = styled.section<SectionContainerProps>`
   background-position: center;
   background-repeat: no-repeat;
   @media (min-width: 900px) {
+    
     padding: 2rem 6rem;
     background-image: url(${props => props.bgBig });
     
